@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo List App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="header">TodoList App</div>
+        <div id="input_container">
+            <button type="button" id="arrow">&#10094;</button>
+            <input type="text" id="user_input" 
+            placeholder="What needs to be done?">
+            <button type="button" id="add_btn">Add</button>
+        </div>
+            <ul id="todoList">
+                <div id="footer">
+                    <div id="how_many_left"></div>
+                    <div id="buttons">
+                        <button type="button" id="btn_all">All</button>
+                        <button type="button" id="btn_act">Active</button>
+                        <button type="button" id="btn_cmp">Completed</button>
+                    </div>
+                    <div id="clear_completed">Clear Completed</div>
+                </div>   
+            </ul>
+             
+        <script src="main.js"></script>
+    </body>
+</html>

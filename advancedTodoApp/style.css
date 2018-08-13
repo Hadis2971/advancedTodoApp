@@ -1,0 +1,416 @@
+*{
+    margin : 0em;
+    padding: 0em;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+}
+
+.header{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: 400%;
+    color: #E94b3c;
+}
+
+#input_container{
+    width: 50%;
+    padding: 0.5em;
+    margin: auto;
+    border: 0.05em solid #ebebeb;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0,0,0,0.15);
+    background-color: #FFF;
+    text-align: center;
+    position: relative;
+}
+
+#input_container > #user_input{
+    display: inline-block;
+    width: 80%;
+    padding: 0.4em;
+    margin: auto;
+    margin-right: 30%;
+    margin-left: 4%;
+    border: 0em;
+    outline: 0em;
+    user-select: none;
+    font-size: 1.4em;
+    color: #686868;
+    
+}
+
+::placeholder { 
+    color: #c8c8c8;
+    opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+    color: #c8c8c8;
+}
+
+::-ms-input-placeholder { 
+    color: #c8c8c8;
+}
+
+#add_btn{
+    font-size: 1.4em;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    cursor: pointer;
+    border: 0.05em solid #E94b3c;
+    border-radius: 0.5em;
+    outline: none;
+    background-color: transparent;
+    color: #E94b3c;
+    box-sizing: border-box;
+    padding: 0.2em;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+#add_btn:hover{
+    opacity: 1;
+}
+
+#arrow{
+    position: absolute;
+    left: 0.3em;
+    top: 1em;
+    font-size: 130%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    user-select: none;
+    color: #c8c8c8;
+    background-color: transparent;
+    transform: rotate(270deg);
+    vertical-align: middle;
+}
+
+#arrow.arrow_class{
+    color: #606060;
+}
+
+#todoList{
+    width: 51.4%;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow:
+    0.1em 1px 1px rgba(0,0,0,0.15),
+    0.1em 10px 0 -5px #eee,
+    0.1em 10px 1px -4px rgba(0,0,0,0.15),
+    0.1em 20px 0 -10px #eee,
+    0.1em 20px 1px -9px rgba(0,0,0,0.15);
+    padding: 0.8em 0em 0.8em 0em;
+   /* display: none; */
+}
+
+#todoList .list_style{
+    border-bottom: 0.08em solid #ebebeb;
+    width: 100%;
+    height: 1em;
+    padding-bottom: 1em;
+    display: block;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1.3em;
+    color: #4d4d4d;
+    position: relative;
+}
+
+#todoList .list_style:not(:first-child){
+    padding-top: 0.7em;
+}
+
+.inner_list_item{
+    width: 97%;
+    height: 2em;
+    margin: auto;
+}
+
+.circle{
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.05em solid #c8c8c8;
+    border-radius: 50%;
+    outline: none;
+    user-select: none;
+    background-color: transparent;
+    margin-right: 0.5em;
+    margin-left: 0.4em;
+    position: relative;
+    bottom: 0.1em;
+    cursor: pointer;
+    color: green;
+    font-size: 1.2em;
+}
+
+.para{
+    display: inline-block;
+    position: absolute;
+    bottom: 0.55em;
+}
+
+
+
+.delete{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    float: right;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 0em;
+    margin-right: 1em;
+    color: #cbcbcb;
+    transition: color 0.2s ease;
+}
+
+.delete:hover{
+    color: #cc0000;
+}
+
+#footer{
+    position: relative;
+    box-sizing: border-box;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    display: none;
+}
+
+#footer.show_footer{
+    display: block;
+}
+
+#footer > div{
+    display: inline;
+}
+
+#footer > #how_many_left{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    bottom: 1%;
+    color: #909090;
+}
+
+#footer > #buttons{
+    position: absolute;
+    left: 36%;
+    top: 1%;
+    bottom: 1%;
+}
+
+#buttons > button{
+    border: 0.01em solid #ebebeb;
+    outline: 0em;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+#buttons > #btn_all{
+    transition: color 0.2s ease;
+}
+
+#buttons > #btn_all:hover{
+    color: #236AB9;
+}
+
+#buttons > #btn_act{
+    transition: color 0.2s ease;
+}
+
+#buttons > #btn_act:hover{
+    color: #e60000;
+}
+
+#buttons > #btn_cmp{
+    transition: color 0.2s ease;
+}
+
+#buttons > #btn_cmp:hover{
+    color: #00cc00;
+}
+
+#footer > #clear_completed{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    bottom: 1%;
+    color: #909090;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#footer > #clear_completed:hover{
+    text-decoration: underline;
+}
+
+#footer > #clear_completed.show_clear_completed{
+    opacity: 1;
+}
+
+/* --------Media Queries-------- */
+
+@media only screen and (max-width: 1270px){
+    #input_container{
+        width: 50%;
+    }
+    
+    #todoList{
+        width: 51.6%;
+    }
+    
+    #arrow{
+        font-size: 120%;
+        top: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 1190px){
+    #input_container{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1060px){
+    #input_container{
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 940px){
+    #input_container{
+        width: 70%;
+    }
+    
+    #todoList{
+        width: 72%;
+    }
+
+    #arrow{
+        font-size: 140%;
+        top: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    #input_container{
+        width: 80%;
+    }
+    
+    #todoList{
+        width: 82.6%;
+    }
+    
+    #add_btn{
+        font-size: 1.2em;
+        position: absolute;
+        right: 1em;
+        top: 0.7em;
+    }
+}
+
+
+
+@media only screen and (max-width: 640px){
+    #input_container{
+        width: 100%;
+    }
+    
+    #todoList{
+        width: 100%;
+    }
+    
+    #add_btn{
+        font-size: 1.2em;
+        position: absolute;
+        right: 1em;
+        top: 0.7em;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .header{
+        font-size: 300%;
+    }
+    
+    #input_container > #user_input{
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .header{
+        font-size: 200%;
+    }
+    
+    #add_btn{
+        font-size: 1em;
+        position: absolute;
+        right: 1.3em;
+    }
+    
+    #input_container > #user_input{
+        font-size: 1.1em;
+    }
+    
+    #arrow{
+        font-size: 110%;
+        top: 1em;
+    }
+    
+    .delete{
+        margin-top: 0.1em;
+    }
+    
+    #footer{
+        padding: 0.3em;
+    }
+    
+    #footer div{
+        display: block;
+    }
+    
+    #footer > #how_many_left{
+        position: static;
+        margin-bottom: 0.5em;
+    
+    }
+
+    #footer > #buttons{
+        position: static;
+        margin-bottom: 0.5em;
+    }
+
+
+
+    #footer > #clear_completed{
+        position: static;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
